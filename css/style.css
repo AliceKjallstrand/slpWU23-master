@@ -6,28 +6,56 @@ body {
     display: grid;
     height: 130vh;
     grid-template-columns: 100%;
-    grid-template-rows: 20% 1fr 10%;
+    grid-template-rows: 15% 1fr 10%;
     grid-template-areas: 
     'hd'
     'mn'
     'ft'
 }
 
+#laincontainer {
+    display: grid;
+    height: 130vh;
+    grid-template-columns: 30% 1fr;
+    grid-template-rows: 15% 1fr 10% ;
+    grid-template-areas: 
+    'hd hd'
+    'li lm'
+    'ft ft'
+}
+
+
 header {
     grid-area: hd;
     background-color: black;
     display: flex;
-    justify-content: center;
-    margin-right: 30px;
+    justify-content: space-around;
+    align-items: center;
+    margin-right: 60vh;
+    margin-left: 60vh;
+    
 }
 
 main {
     grid-area: mn;
-    background: url(/img/thewiredmain.png);
+    background: url(/img/nedladdning.gif);
     background-size: 100%;
     display: flex;
     justify-content: center;
     
+}
+
+.lainmain {
+    grid-area: lm;
+    background: url(/img/lovelain.jpg);
+    background-size: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.laininfo {
+    grid-area: li;
+    background-color: rgb(37, 20, 68);
 }
 
 footer {
@@ -38,8 +66,8 @@ footer {
 
 
 img {
-    height: 150px;
-    width: 150px;
+    height: 20vh;
+    width: 20vh;
 }
 
 .mainflex2 {
@@ -51,5 +79,13 @@ img {
 
 }
 
+.taskbar {
+    color: cornsilk;
+    font-size: 5vh;
+}
 
+a {
+    color:cornsilk;
+    text-decoration: none;
+}
 
