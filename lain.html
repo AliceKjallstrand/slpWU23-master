@@ -10,16 +10,29 @@
 <body>
     <div id="laincontainer">
         <header>      
-           <div class="taskbar">Access</div>
+            <div class="taskbar">Access</div>
             <div class="mainflex1">
                 <a href = "index.html"> <img src = "img/thewiredicon.png"> </a>
             </div>
             <div class="taskbar"><a href = "lain.html">Lain</a></div>
 
         </header>
-        <main class="lainmain"> </main>
-        <article class="laininfo"></article>
-
+        <main class="slider"> 
+            <img id="img-1" src="img/lovelain.jpg" alt="Image 1"/>
+            <img id="img-2" src="img/lain2.jpg" alt="Image 2"/>
+            <img id="img-3" src="img/lain3.jpg" alt="Image 3"/>
+        </main>
+        <div class="navigation-button">
+            <span class="dot active" onclick="changeSlide(0)"></span>
+            <span class="dot" onclick="changeSlide(1)"></span>
+            <span class="dot" onclick="changeSlide(2)"></span>
+          </div>
+        <article class="laininfo">
+            <h1>Let's all love Lain.</h1>
+            <h2></h2>
+        </article>
+        <script src="js/script.js"> </script>
+        <footer class="lainfooter"></footer>
            
    </div>
 </body>
