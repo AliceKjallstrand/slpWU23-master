@@ -1,7 +1,9 @@
 body {
     background-color: black;
+    margin: 0px;
 }
 
+@media (min-width: 600px){
 #maincontainer {
     display: grid;
     height: 130vh;
@@ -11,6 +13,39 @@ body {
     'hd'
     'mn'
     'ft'
+}
+
+#navicontainer {
+    display: grid;
+    height: 130vh;
+    grid-template-columns: 30% 1fr;
+    grid-template-rows: 15% 1fr 10%;
+    grid-template-areas: 
+    'hd hd'
+    'n1 n2'
+    'ft ft'
+}
+
+#protocolcontainer {
+    display: grid;
+    height: 130vh;
+    grid-template-columns: 30% 1fr;
+    grid-template-rows: 15% 1fr 10%;
+    grid-template-areas: 
+    'hd hd'
+    'p1 p2'
+    'ft ft'
+}
+
+#vrcontainer {
+    display: grid;
+    height: 130vh;
+    grid-template-columns: 30% 1fr;
+    grid-template-rows: 15% 1fr 10%;
+    grid-template-areas: 
+    'hd hd'
+    'v1 v2'
+    'ft ft'
 }
 
 #laincontainer {
@@ -29,10 +64,11 @@ header {
     grid-area: hd;
     background-color: black;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
-    margin-right: 60vh;
-    margin-left: 60vh;
+    z-index: 15;
+    
+  
     
 }
 
@@ -97,7 +133,22 @@ main {
 
 .laininfo {
     grid-area: li;
-    background-color: rgb(37, 20, 68);
+    background-color: rgb(5, 5, 5);
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.laintext {
+    color: cornsilk;
+    
+}
+
+h1 {
+    color: cornsilk;
+}
+h2 {
+    color: cornsilk;
 }
 
 footer {
@@ -134,3 +185,383 @@ a {
     text-decoration: none;
 }
 
+.menu-button{
+    cursor: pointer;
+    display: inline;
+    display: flex;
+    color: cornsilk;
+    font-size: 5vh;
+}
+
+.menu{
+    height: 10vh;
+    width: 100%;
+    background:black;
+    position: absolute;
+    top: 0vh;
+    transition: top 0.5s;
+    box-shadow: 10px 0px 21px -10px rgba(0,0,0,0.75);
+    z-index: 10;
+ 
+    
+
+
+}
+
+ul {
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.show{
+    top: 19vh;
+}
+
+.fade-layer{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: none;
+    z-index: 5;
+}
+
+.fade-layer.visible{
+    display: block;
+}
+
+.navimain1 {
+    grid-area: n1;
+    background: rgb(5, 5, 5);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+}
+
+.navimain2 {
+    grid-area: n2;
+    background: url("../img/navi.jpeg");
+    background-position: center;
+    background-size: 110%;
+}
+.protocolmain1 {
+    grid-area: p1;
+    background: rgb(5, 5, 5);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    color: cornsilk;
+
+}
+
+.protocolmain2 {
+    grid-area: p2;
+    background: url("../img/lainvr.png");
+    background-position: center;
+    background-size: 100%;
+
+}
+.vrmain1 {
+    grid-area: v1;
+    background: rgb(5, 5, 5);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    color: cornsilk;
+
+}
+.vrmain2 {
+    grid-area: v2;
+    background: url("../img/vrlain.webp");
+    background-position: center;
+    background-size: 100%;
+
+}
+}
+
+@media (max-width: 600px){
+    #maincontainer {
+        display: grid;
+        height: 100vh;
+        grid-template-columns: 100%;
+        grid-template-rows: 20% 1fr 10%;
+        grid-template-areas: 
+        'hd'
+        'mn'
+        'ft'
+    }
+    
+    #navicontainer {
+        display: grid;
+        height: 100vh;
+        grid-template-columns: 30% 1fr;
+        grid-template-rows: 20% 1fr 1fr 10%;
+        grid-template-areas: 
+        'hd hd'
+        'n1 n1'
+        'n2 n2'
+        'ft ft'
+    }
+    
+    #protocolcontainer {
+        display: grid;
+        height: 100vh;
+        grid-template-columns: 30% 1fr;
+        grid-template-rows: 20% 1fr 1fr 10%;
+        grid-template-areas: 
+        'hd hd'
+        'p1 p1'
+        'p2 p2'
+        'ft ft'
+    }
+    
+    #vrcontainer {
+        display: grid;
+        height: 100vh;
+        grid-template-columns: 30% 1fr;
+        grid-template-rows: 20% 45% 1fr 10%;
+        grid-template-areas: 
+        'hd hd'
+        'v1 v1'
+        'v2 v2'
+        'ft ft'
+    }
+    
+    #laincontainer {
+        display: grid;
+        height: 100vh;
+        grid-template-columns: 30% 1fr;
+        grid-template-rows: 20% 45% 10% 1fr;
+        grid-template-areas: 
+        'hd hd'
+        'lm lm'
+        'lf ft'
+        'li fi'
+    }
+    
+    
+    header {
+        grid-area: hd;
+        background-color: black;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        z-index: 15;
+        
+      
+        
+    }
+    
+    main {
+        grid-area: mn;
+        background: url(/img/nedladdning.gif);
+        background-size: 300%;
+        background-position: center;
+        display: flex;
+        justify-content: center;
+        
+    }
+    
+    .slider {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        grid-area: lm;
+        display:flex;
+       
+        
+    }
+      
+    .slider img {
+        width: 100%;
+        height: 100%;
+        position:absolute;
+        top: 0;
+        left: 0;
+    }
+      
+    .slider img:first-child {
+        z-index: 1;
+        background-size: 100%;
+    }
+    
+    .slider img:nth-child(2) {
+        z-index: 0;
+    }
+    
+    .navigation-button {
+        text-align: center;
+        position: relative;
+        grid-area: ft;
+        display: flex;
+        justify-content: center;
+    }
+      
+    .dot {
+        cursor: pointer;
+        height: 15px;
+        width: 15px;
+        margin: 0 2px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+    }
+      
+    .active,
+    .dot:hover {
+        background-color: #717171;
+    }
+    
+    .laininfo {
+        grid-area: li;
+        background-color: rgb(5, 5, 5);
+        display:flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    
+    .laintext {
+        color: cornsilk;
+        
+    }
+    
+    h1 {
+        color: cornsilk;
+    }
+    h2 {
+        color: cornsilk;
+    }
+    
+    footer {
+        grid-area: ft;
+        background-color: black;
+    }
+    
+    .lainfooter {
+        grid-area: lf;
+        background-color: black;
+    }
+    
+    img {
+        height: 20vh;
+        width: 20vh;
+    }
+    
+    .mainflex2 {
+        background: url("../img/welcome.png");
+        background-size: 150%;
+        height: 70%;
+        width: 70%;
+       background-position: center;
+    
+    }
+    
+    .taskbar {
+        color: cornsilk;
+        font-size: 3vh;
+    }
+    
+    a {
+        color:cornsilk;
+        text-decoration: none;
+    }
+    
+    .menu-button{
+        cursor: pointer;
+        display: inline;
+        display: flex;
+        color: cornsilk;
+        font-size: 3vh;
+    }
+    
+    .menu{
+        height: 10vh;
+        width: 100%;
+        background:black;
+        position: absolute;
+        top: 0vh;
+        transition: top 0.5s;
+        box-shadow: 10px 0px 21px -10px rgba(0,0,0,0.75);
+        z-index: 10;
+     
+        
+    
+    
+    }
+    
+    ul {
+        display:flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    
+    .show{
+        top: 19vh;
+    }
+    
+    .fade-layer{
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: none;
+        z-index: 5;
+    }
+    
+    .fade-layer.visible{
+        display: block;
+    }
+    
+    .navimain1 {
+        grid-area: n1;
+        background: rgb(5, 5, 5);
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    
+    }
+    
+    .navimain2 {
+        grid-area: n2;
+        background: url("../img/navi.jpeg");
+        background-position: center;
+        background-size: 120%;
+    }
+    .protocolmain1 {
+        grid-area: p1;
+        background: rgb(5, 5, 5);
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        color: cornsilk;
+    
+    }
+    
+    .protocolmain2 {
+        grid-area: p2;
+        background: url("../img/lainvr.png");
+        background-position: center;
+        background-size: 100%;
+    
+    }
+    .vrmain1 {
+        grid-area: v1;
+        background: rgb(5, 5, 5);
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        color: cornsilk;
+    
+    }
+    .vrmain2 {
+        grid-area: v2;
+        background: url("../img/vrlain.webp");
+        background-position: center;
+        background-size: 100%;
+    
+    }
+    }
